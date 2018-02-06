@@ -8,12 +8,19 @@ namespace POS.Models
 {
     public class Manufacturer
     {
+        [Key]
         public int ManufacturerId { get; set; }
+
         public string ManufacturerName { get; set; }
+
         public string ManufacturerCode { get; set; }
+
         public string ContactPerson { get; set; }
+
         public string ContactNo { get; set; }
+
         public string Email { get; set; }
+
         public string Address { get; set; }
 
         //Common Property

@@ -140,8 +140,11 @@
       <DependentUpon>201801031529062_Company_User_UserRole2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\BuyInvoice.cs" />
-    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\Assets.cs" />
+    <Compile Include="Models\PurchaseInvoice.cs" />
+    <Compile Include="Models\DamageProduct.cs" />
+    <Compile Include="Models\ProductReturn.cs" />
+    <Compile Include="Models\Shop.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DBConnection.cs" />
     <Compile Include="Models\Designation.cs" />
@@ -151,6 +154,7 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductGroup.cs" />
     <Compile Include="Models\SalesInvoice.cs" />
+    <Compile Include="Models\ShopBranch.cs" />
     <Compile Include="Models\Stock.cs" />
     <Compile Include="Models\Supplier.cs" />
     <Compile Include="Models\Transaction.cs" />

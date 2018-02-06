@@ -9,29 +9,56 @@ namespace POS.Models
 {
     public class Employee
     {
+        [Key]
         public int EmployeeId { get; set; }
+
         public string Eid { get; set; }
+
         public string FirstName { get; set; }
+
         public string MiddleName { get; set; }
+
         public string LastName { get; set; }
+
         public string Mobile { get; set; }
+
         public string Mobile2 { get; set; }
+
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
+
+        [DataType(DataType.Date)]
         public DateTime DateOfBirth { get; set; }
+
         public string Nid { get; set; }
+
         public string BirthRegistrationId { get; set; }
+
         public string MeritalStatus { get; set; }
+
         public string FathersName { get; set; }
+
         public string MothersName { get; set; }
+
         public string SpouseName { get; set; }
+
         public string PresentAddress { get; set; }
+
         public string PermanentAddress { get; set; }
+
+        [DataType(DataType.Date)]
         public DateTime JoininDate { get; set; }
+
         public string ReferancePerson { get; set; }
+
         public string RefPersonContact { get; set; }
+
         public byte[] Image { get; set; }
+
         public decimal? BasicSalary { get; set; }
+
         public string Status { get; set; }
+
         //Common Property
         public Guid? CreatedUser { get; set; }
         [DataType(DataType.Date)]

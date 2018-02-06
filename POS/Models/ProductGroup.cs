@@ -9,8 +9,11 @@ namespace POS.Models
 {
     public class ProductGroup
     {
+        [Key]
         public int ProductGroupId { get; set; }
+
         public string ProductGroupName { get; set; }
+
         public string ProductGroupCode { get; set; }
 
         //PRODUCT SUB CATEGORY

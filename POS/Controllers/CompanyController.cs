@@ -27,7 +27,7 @@ namespace POS.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Company company = db.Company.Find(id);
+            Shop company = db.Company.Find(id);
             if (company == null)
             {
                 return HttpNotFound();
@@ -46,7 +46,7 @@ namespace POS.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="CompanyId,CompanyName,CompanyCode,CompanyLogo,Phone,Mobile,Telephone,Email,Address,CreatedUser,CreateDate,EditedUser,EditedDate")] Company company)
+        public ActionResult Create([Bind(Include="CompanyId,CompanyName,CompanyCode,CompanyLogo,Phone,Mobile,Telephone,Email,Address,CreatedUser,CreateDate,EditedUser,EditedDate")] Shop company)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +65,7 @@ namespace POS.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Company company = db.Company.Find(id);
+            Shop company = db.Company.Find(id);
             if (company == null)
             {
                 return HttpNotFound();
@@ -78,7 +78,7 @@ namespace POS.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="CompanyId,CompanyName,CompanyCode,CompanyLogo,Phone,Mobile,Telephone,Email,Address,CreatedUser,CreateDate,EditedUser,EditedDate")] Company company)
+        public ActionResult Edit([Bind(Include="CompanyId,CompanyName,CompanyCode,CompanyLogo,Phone,Mobile,Telephone,Email,Address,CreatedUser,CreateDate,EditedUser,EditedDate")] Shop company)
         {
             if (ModelState.IsValid)
             {
@@ -96,7 +96,7 @@ namespace POS.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Company company = db.Company.Find(id);
+            Shop company = db.Company.Find(id);
             if (company == null)
             {
                 return HttpNotFound();
@@ -109,7 +109,7 @@ namespace POS.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Company company = db.Company.Find(id);
+            Shop company = db.Company.Find(id);
             db.Company.Remove(company);
             db.SaveChanges();
             return RedirectToAction("Index");

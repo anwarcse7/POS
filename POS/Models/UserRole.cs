@@ -8,6 +8,7 @@ namespace POS.Models
 {
     public class UserRole
     {
+        [Key]
         public int UserRoleId { get; set; }
 
         [StringLength(20)]
@@ -16,14 +17,13 @@ namespace POS.Models
 
         public bool Status { get; set; }
 
+        //Common Property
         public Guid? CreatedUser { get; set; }
-
         [DataType(DataType.Date)]
         public DateTime? CreateDate { get; set; }
-
         public Guid? EditedUser { get; set; }
-
         [DataType(DataType.Date)]
         public DateTime? EditedDate { get; set; }
+        public string UserIp { get; set; }
     }
 }

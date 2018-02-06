@@ -8,9 +8,14 @@ namespace POS.Models
 {
     public class SalesInvoice
     {
+        [Key]
         public int SalesInvoiceId { get; set; }
+
         public string SalesInvoiceNo { get; set; }
+
+        [DataType(DataType.DateTime)]
         public DateTime SalesDate { get; set; }
+
         public decimal? TotalSaleValue { get; set; }
 
         //Common Property

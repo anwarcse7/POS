@@ -8,12 +8,19 @@ namespace POS.Models
 {
     public class Transaction
     {
+        [Key]
         public Int64 TransactionId { get; set; }
+
         public string Description { get; set; }
+
         public decimal? Debit { get; set; }
+
         public decimal? Credit { get; set; }
-        //Bank or Cash
+
+        //Bank or Cash or Others
         public string TransactionType { get; set; }
+
+        [DataType(DataType.DateTime)]
         public DateTime TransactionDate { get; set; }
 
         //Common Property

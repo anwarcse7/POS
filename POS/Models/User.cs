@@ -30,6 +30,8 @@ namespace POS.Models
         [StringLength(20, ErrorMessage = "Must be less then 20 characters")]
         public string Contact { get; set; }
 
+        public int UserRoleId { get; set; }
+
         //Common Property
         public Guid? CreatedUser { get; set; }
         [DataType(DataType.Date)]
@@ -40,8 +42,7 @@ namespace POS.Models
         public string UserIp { get; set; }
 
         //Foreign Key
-        [ForeignKey("UserRole")]
-        public int UserRoleId { get; set; }
+        [ForeignKey("UserRoleId")]
         public virtual UserRole UserRole { get; set; }
     }
 }

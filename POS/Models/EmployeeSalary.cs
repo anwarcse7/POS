@@ -9,9 +9,15 @@ namespace POS.Models
 {
     public class EmployeeSalary
     {
+        [Key]
         public Int64 EmployeeSalaryId { get; set; }
+
         public DateTime SalaryMonth { get; set; }
+
         public decimal? TotalPayment { get; set; }
+
+        public int? EmployeeId { get; set; }
+
         //Common Property
         public Guid? CreatedUser { get; set; }
         [DataType(DataType.Date)]
@@ -22,8 +28,7 @@ namespace POS.Models
         public string UserIp { get; set; }
 
         //ForeignKey
-        [ForeignKey("Employee")]
-        public int? EmployeeId { get; set; }
+        [ForeignKey("EmployeeId")]
         public virtual Employee Employee { get; set; }
     }
 }
