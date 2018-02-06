@@ -16,6 +16,7 @@ namespace POS.Models
 
         public decimal? DamageCost { get; set; }
 
+        public int ProductId { get; set; }
         //Common Property
         public Guid? CreatedUser { get; set; }
         [DataType(DataType.Date)]
@@ -26,7 +27,6 @@ namespace POS.Models
         public string UserIp { get; set; }
         //Foreign Key
         [ForeignKey("ProductId")]
-        public int ProductId { get; set; }
         public virtual Product Product { get; set; }
     }
 }
