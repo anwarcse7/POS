@@ -8,8 +8,10 @@ namespace POS.Models
 {
     public class BuyInvoice
     {
+        [Key]
         public int BuyInvoiceId { get; set; }
         public string BuyInvoiceNo { get; set; }
+        [DataType(DataType.DateTime)]
         public DateTime? BuyDate { get; set; }
         public decimal? TotalSaleValue { get; set; }
 

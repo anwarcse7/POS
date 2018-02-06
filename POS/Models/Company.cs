@@ -14,7 +14,7 @@ namespace POS.Models
 
         [Required]
         [StringLength(100)]
-        public string CompanyName { get; set; }-
+        public string CompanyName { get; set; }
 
         [StringLength(10)]
         public string CompanyCode { get; set; }
